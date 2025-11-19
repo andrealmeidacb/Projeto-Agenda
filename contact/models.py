@@ -4,10 +4,11 @@ from django.utils import timezone
 # id (primary key - automático)
 # first_name (string), last_name (string), phone (string)
 # email (email), created_date (date), description (text)
-
-# Depois
-# category (foreign key), show (boolean), owner (foreign key)
+# category (foreign key), show (boolean),
 # picture (imagem)
+
+# Depois  
+# owner (foreign key)
 
 class Contact(models.Model):
     fisrt_name = models.CharField(max_length=50)
@@ -16,6 +17,8 @@ class Contact(models.Model):
     email = models.EmailField(max_length=254, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)
+    show = models.BooleanField(default=True)
+    picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/')
 
     def __str__(self) -> str:
         return f'{self.fisrt_name} {self.last_name}'
