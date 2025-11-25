@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 
 
 def create(request):
-    
+    post = request.POST
     
     context = {
 
