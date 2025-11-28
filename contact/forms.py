@@ -24,7 +24,8 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = models.Contact
         fields = (
-            'fisrt_name', 'last_name', 'phone'
+            'fisrt_name', 'last_name', 'phone',
+            'email', 'description', 'category',
         )
         # widgets = {
         #     'fisrt_name': forms.TextInput(
@@ -51,15 +52,26 @@ class ContactForm(forms.ModelForm):
         return super().clean()
     
     def clean_first_name(self):
-        fisrt_name = self.cleaned_data.get("fisrt_name")
-    
-        if fisrt_name == 'ABC':
-            self.add_error(
-                'fisrt_name',
-                ValidationError(
-                    'Veio do add_error',
-                    code='invalid'
-                )
+        fisrt_name = self.cleaned_data.get('fisrt_name')
+
+        msg = ValidationError(
+                'Veio do add_error',
+                code='invalid'
             )
 
-        return fisrt_name
+        if fisrt_name == 'ABC':
+            self.add_error('first_name', msg)
+    
+    # def clean_first_name(self):
+    #     fisrt_name = self.cleaned_data.get("fisrt_name")
+    
+    #     if fisrt_name == 'ABC':
+    #         self.add_error(
+    #             'fisrt_name',
+    #             ValidationError(
+    #                 'Veio do add_error',
+    #                 code='invalid'
+    #             )
+    #         )
+
+    #     return fisrt_name
