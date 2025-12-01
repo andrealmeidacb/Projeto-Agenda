@@ -302,6 +302,10 @@ svg {
   cursor: pointer;
   transition: filter var(--transition-fast) ease-in-out;
   margin-left: 110px;
+  position: relative;
+  top: -34px;
+  height: 42px;
+  width: 90px;
 }
 
 .btn {

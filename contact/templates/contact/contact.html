@@ -13,6 +13,12 @@
         <p>Description: {{ contact.description }}<br></p>
         <p>Category: {{ contact.category.name }}<br></p>
 
+        {% if contact.picture %}
+            <p>
+                <img src="{{ contact.picture.url }}" alt="{{ contact.fisrt_name }} {{ contact.last_name }}">
+            </p>
+        {% endif %}
+
         <div class="contact-links">
             <a 
             class="btn btn-link" 
