@@ -292,6 +292,18 @@ svg {
   font-size: var(--smaller-font-size);
 }
 
+.btn-delete{
+  background-color: red;
+  color: var(--clr-white);
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--default-border-radius);
+  cursor: pointer;
+  transition: filter var(--transition-fast) ease-in-out;
+  margin-left: 110px;
+}
+
 .btn {
   background-color: var(--link-dark-color);
   color: var(--clr-white);
@@ -303,6 +315,8 @@ svg {
   transition: filter var(--transition-fast) ease-in-out;
 }
 
+
+
 .btn:hover {
   filter: brightness(90%);
 }
@@ -312,3 +326,4 @@ svg {
   filter: brightness(80%);
   box-shadow: 0 0 5px var(--link-dark-color);
 }
+

@@ -12,5 +12,29 @@
         <p>Create Date: {{ contact.created_date }}<br></p>
         <p>Description: {{ contact.description }}<br></p>
         <p>Category: {{ contact.category.name }}<br></p>
+
+        <div class="contact-links">
+            <a 
+            class="btn btn-link" 
+            href="{% url "contact:update" contact.id %}"
+            >Update</a>
+
+            <form action="{% url "contact:delete" contact.id %}" method="POST">
+                {% csrf_token %}
+
+                {% if confirmation == 'no' %}
+                    <input type="hidden" name="confirmation" value="yes">
+                    <button 
+                    class="btn-delete" 
+                    type="submit"
+                    >Confirma?</button>
+                {% else %}
+                    <button 
+                    class="btn-delete" 
+                    type="submit"
+                    >Delete</button>
+                {% endif %}
+            </form>
+        </div>
     </div>
 {% endblock content %}
