@@ -1,5 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from django.contrib.auth.forms import UserCreationForm
 from . import models
 
 class ContactForm(forms.ModelForm):
@@ -46,3 +47,7 @@ class ContactForm(forms.ModelForm):
 
         if fisrt_name == 'ABC':
             self.add_error('first_name', msg)
+
+
+class RegisterForm(UserCreationForm):
+    ...
