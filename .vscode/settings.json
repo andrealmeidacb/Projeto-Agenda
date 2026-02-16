@@ -1,21 +1,35 @@
 {
-    "window.zoomLevel": 1,
-    "editor.fontSize": 21,
+    "window.zoomLevel": 0,
+
+    "editor.fontSize": 22,
+    "editor.lineHeight": 21,
     "editor.hover.enabled": "on",
+
     "workbench.startupEditor": "none",
+    "workbench.editor.empty.hint": "hidden",
+
     "explorer.compactFolders": false,
-    "terminal.integrated.fontSize": 17,
+
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "",
+    "terminal.integrated.allowChords": false,
+
     "editor.rulers": [87, 120],
+
     "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
     "workbench.iconTheme": "material-icon-theme",
+
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": true,
+
+    "editor.fontFamily": "Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+
     "code-runner.executorMap": {
       "python": "cls ; python -u"
     },
     "code-runner.runInTerminal": true,
     "code-runner.ignoreSelection": true,
-    "editor.fontFamily": "Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
-    "terminal.integrated.fontFamily": "",
-    "editor.fontLigatures": true,
+
     "[python]": {
       "editor.defaultFormatter": "ms-python.python",
       "editor.tabSize": 4,
@@ -27,20 +41,23 @@
         "source.organizeImports": "always"
       }
     },
+
     "python.languageServer": "Pylance",
+
     "python.formatting.autopep8Args": [
       "--indent-size=4",
       "--max-line-length=80"
-      // "--ignore=E111"
     ],
-    "python.linting.flake8Args": [
-      // "--ignore=E111",
-    ],
+
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [],
+
     "python.linting.mypyEnabled": true,
+
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    // "python.analysis.diagnosticSeverityOverrides": {},
+
+    "python.analysis.typeCheckingMode": "basic",
     "python.analysis.diagnosticSeverityOverrides": {
       "reportUnknownMemberType": "none",
       "reportUnknownArgumentType": "none",
@@ -48,19 +65,17 @@
       "reportUnknownLambdaType": "none",
       "reportUnknownParameterType": "none"
     },
-    // "python.defaultInterpreterPath": "./venv/bin/python",
-    "python.analysis.typeCheckingMode": "basic",
+
     "cSpell.enabled": true,
     "pylint.enabled": false,
-    "terminal.integrated.allowChords": false,
-    "workbench.editor.empty.hint": "hidden",
-    "files.associations": {
-    "*.html": "html",
-    "*.djhtml": "django-html",
-    "*.jinja": "django-html"
-    },
-    "emmet.includeLanguages": {
-        "django-html": "html"
-    }
 
-  }
+    "files.associations": {
+      "*.html": "html",
+      "*.djhtml": "django-html",
+      "*.jinja": "django-html"
+    },
+
+    "emmet.includeLanguages": {
+      "django-html": "html"
+    }
+}
